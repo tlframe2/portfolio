@@ -1,22 +1,21 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
   {% load staticfiles %}
+
   <head>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="../../../../favicon.ico">
-
-    <title>Tyrell Frame</title>
-
+    <title>Tyrell Frame | Portfolio</title>
     <!-- Bootstrap core CSS -->
-    <!-- <link href="../../../../dist/css/bootstrap.min.css" rel="stylesheet"> -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    
     <!-- Custom styles for this template -->
     <link rel="stylesheet" href="../../static/jobs/css/style.css">
-    <link href="album.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
     
   </head>
 
@@ -24,8 +23,7 @@
 
     <header>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <!-- <a class="navbar-brand" href="#">Tyrell Frame</a> -->
-        <h1 class="navbar-brand">Tyrell Frame</h1>
+        <h2 class="navbar-brand">Tyrell Frame</h2>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -43,17 +41,34 @@
 
       <section class="bg-jumbotron text-center" id="intro">
         <div class="container">
-          <h1 class="jumbotron-heading text-white">Hi, I'm Tyrell.</h1>
-          <p class="lead text-white">I'm a full stack developer who loves to tackle challenging problems.</p>
+          <h1 class="jumbotron-heading text-white display-3">Hi, I'm Tyrell!</h1>
+          <img src="../../static/jobs/images/profile-pic.jpg" class="profile-pic">
+          <p class="lead text-white tagline">
+            I'm a Python and full stack web developer <br> who loves to tackle challenging problems.
+          </p>
           <p>
-            <a href="mailto:tlframe2@gmail.com" class="btn btn-primary my-2">Email Me</a>
+            <a href="mailto:tlframe2@gmail.com" class="contact"><button>Get in Touch</button></a>
           </p>
         </div>
       </section>
 
-      <div class="album py-5 bg-light">
+      <div class="skills">
+        <h1 class="text-center display-4">Skills</h1>
+        <ul>
+          <li>Python</li>
+          <li>JavaScript</li>
+          <li>HTML & CSS</li>
+          <li>Java</li>
+          <li>SQL</li>
+          <li>PostgreSQL</li>
+          <li>C</li>
+          <li>C++</li>
+        </ul>
+      </div>
+
+      <div class="album py-5 bg-light projects">
         <div class="container">
-          <h1 class="text-center">Projects</h1>
+          <h1 class="text-center display-4">Projects</h1>
           <br>
           <div class="row">
 
@@ -63,14 +78,9 @@
                 <img class="card-img-top" src="{{ job.image.url }}" alt="Card image cap">
                 <h4 class="card-title text-center">{{ job.title }}</h4>
                 <div class="card-body">
-                  <p class="card-text">{{ job.summary }}</p>
+                  <p class="card-text"> {{ job.summary }}</p>
+                  <a href="{{ job.link }}"><button>View</button></a>
                 </div>
-                <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View</button> -->
-                <!-- <a href="{{ job.link }}" class="btn btn-sm btn-outline-secondary">View</a> -->
-                <a href="{{ job.link }}" class="btn btn-outline-info btn-sm">View</a>
-                <!-- <p>
-                  <a href="{{ job.link }}" class="btn btn-primary my-2">View</a>
-                </p> -->
               </div>
             </div>
             {% endfor %}
