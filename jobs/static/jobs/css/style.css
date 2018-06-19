@@ -54,6 +54,10 @@ a {
 
 /***** Skills Section *****/
 
+.row {
+    margin-top: 20px;
+}
+
 .skills {
     background: #FF3C38;
     padding: 50px;
@@ -63,21 +67,10 @@ a {
     color: #141414;
 }
 
-.skills ul {
-    width: 80%;
-    list-style-type: none;
-    text-align: center;
-}
-
-.skills li {
-    display: inline-block;
+.skill-block {
     background: #141414;
     color: #ffffff;
     font-size: 24px;
-    height: 50px;
-    line-height: 2;
-    width: 175px;
-    margin: 10px;
     border-radius: 100px;
 }
 
@@ -104,4 +97,16 @@ a {
 button:hover {
     cursor: pointer;
     background: #FF3C38;
+}
+
+@media (max-width: 768px) {
+
+    [class*="col-"] {
+        margin-bottom: 15px;
+    }
+
+    .row {
+        margin-top: 0px;
+    }
+  
 }
