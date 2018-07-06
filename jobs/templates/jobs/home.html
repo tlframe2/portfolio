@@ -47,7 +47,7 @@
             I'm a Python and full stack web developer <br> who loves to tackle challenging problems.
           </p>
           <p>
-            <a href="mailto:tlframe2@gmail.com" class="contact"><button>Get in Touch</button></a>
+            <a href="mailto:tlframe2@gmail.com" class="contact"><button id="contact-btn">Get in Touch</button></a>
           </p>
         </div>
       </section>
@@ -63,7 +63,7 @@
               JavaScript
             </div>
             <div class="text-center col-sm mx-3 skill-block">
-              HTML & CSS
+              HTML/CSS
             </div>
             <div class="text-center col-sm mx-3 skill-block">
               Java
@@ -93,7 +93,7 @@
           <div class="row">
 
             {% for job in jobs.all %}
-            <div class="col-md-4">
+            <div class="col-md-4 project-card">
               <div class="card mb-4 box-shadow">
                 <img class="card-img-top" src="{{ job.image.url }}" alt="Card image cap">
                 <h4 class="card-title text-center">{{ job.title }}</h4>
@@ -128,6 +128,15 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
   </body>
+  <script>
+    window.sr = ScrollReveal({ duration: 2000 });
+    sr.reveal('.jumbotron-heading', { container: '#intro' });
+    sr.reveal('.profile-pic', { delay: 500 }, { container: '#intro' });
+    sr.reveal('.tagline', { delay: 1000 }, { container: '#intro' });
+    sr.reveal('#contact-btn', { delay: 1500 }, { container: '#intro' });
+    sr.reveal('.skill-block', { reset: true });
+    sr.reveal('.project-card');
+  </script>
 </html>
