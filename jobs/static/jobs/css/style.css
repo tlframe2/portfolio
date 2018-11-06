@@ -1,0 +1,121 @@
+/***** General *****/
+
+h1 {
+    font-family: 'Satisfy', cursive;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+/***** Navbar *****/
+
+.navbar {
+    background-color: #141414 !important;
+}
+
+.nav-link {
+    color: #ffffff !important;
+}
+
+/***** About Section *****/
+
+.bg-jumbotron {
+    background-color: #141414;
+    padding-top: 40px;
+    height: 100vh;
+    padding-bottom: 50px;
+}
+
+.profile-pic {
+    display: block;
+    height: 200px;
+    border-radius: 100%;
+    border: 2px solid #FF3C38;
+    margin: 20px auto;
+}
+
+.tagline {
+<<<<<<< HEAD
+    margin: 40px auto;
+=======
+    margin: 20px auto;
+>>>>>>> 801649d63ca563aba6aa9ed46d92314dc679fddc
+    max-width: 600px;
+}
+
+.tagline-text {
+    font-size: 24px;
+}
+
+.contact button {
+    display: block;
+    margin: 35px auto;
+    width: 200px;
+    height: 50px;
+    color: #ffffff;
+    background: transparent;
+    border: 2px solid #FF3C38;
+    border-radius: 100px;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+/***** Skills Section *****/
+
+.row {
+    margin-top: 20px;
+}
+
+.skills {
+    background: #FF3C38;
+    padding: 50px;
+}
+
+.skills, .projects h1 {
+    color: #141414;
+}
+
+.skill-block {
+    background: #141414;
+    color: #ffffff;
+    font-size: 24px;
+    border-radius: 100px;
+}
+
+/***** Projects Section *****/
+
+.view {
+    text-align: center;
+    color: #FF3C38;
+}
+
+.projects button {
+    display: block;
+    margin: 0 auto;
+    width: 100px;
+    height: 30px;
+    color: #ffffff;
+    background: #FF3C38;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+button:hover {
+    cursor: pointer;
+    background: #FF3C38;
+}
+
+@media (max-width: 768px) {
+
+    [class*="col-"] {
+        margin-bottom: 15px;
+    }
+
+    .row {
+        margin-top: 0px;
+    }
+  
+}

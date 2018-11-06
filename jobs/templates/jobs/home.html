@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  {% load staticfiles %}
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+    <title>Tyrell Frame | Portfolio</title>
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="../../static/jobs/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123620019-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-123620019-1');
+    </script>
+
+  </head>
+
+  <body>
+
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <h2 class="navbar-brand">Tyrell Frame</h2>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav ml-auto">
+            <a class="nav-item nav-link" href="{% static 'resume.pdf' %}">Resume</a>
+            <a class="nav-item nav-link" href="https://github.com/tlframe2">Github</a>
+            <a class="nav-item nav-link" href="https://www.linkedin.com/in/tyrellframe/">LinkedIn</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main role="main">
+
+      <section class="bg-jumbotron text-center" id="intro">
+        <div class="container">
+          <h1 class="jumbotron-heading text-white display-3">Hi, I'm <span style="color:#FF3C38;">Tyrell</span>,</h1>
+          <img src="../../static/jobs/images/profile-pic.jpg" class="profile-pic">
+          <div class="tagline">
+            <p class="lead text-white tagline-text">
+              I'm a developer with a passion for creating applications that are aesthetically pleasing
+              and easy to use.
+            </p>
+          </div>
+          <p>
+            <a href="mailto:tlframe2@gmail.com" class="contact"><button id="contact-btn">Get in Touch</button></a>
+          </p>
+        </div>
+      </section>
+
+      <div class="skills">
+        <h1 class="text-center display-4">Skills</h1>
+        <div class="container">
+          <div class="row">
+            <div class="text-center col-sm mx-3 skill-block">Python</div>
+            <div class="text-center col-sm mx-3 skill-block">JavaScript</div>
+            <div class="text-center col-sm mx-3 skill-block">HTML/CSS</div>
+            <div class="text-center col-sm mx-3 skill-block">Bootstrap</div>
+          </div>
+          <div class="row">
+            <div class="text-center col-sm mx-3 skill-block">Django</div>
+            <div class="text-center col-sm mx-3 skill-block">Flask</div>
+            <div class="text-center col-sm mx-3 skill-block">PostgreSQL</div>
+            <div class="text-center col-sm mx-3 skill-block">Java</div>
+          </div>
+          <div class="row">
+            <div class="text-center col-sm mx-3 skill-block">C#</div>
+            <div class="text-center col-sm mx-3 skill-block">.Net Core</div>
+            <div class="text-center col-sm mx-3 skill-block">MS SQL Server</div>
+            <div class="text-center col-sm mx-3 skill-block">Git</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="album py-5 bg-light projects">
+        <div class="container">
+          <h1 class="text-center display-4">Projects</h1>
+          <br>
+          <div class="row">
+
+            {% for job in jobs.all %}
+            <div class="col-md-4 project-card">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top" src="{{ job.image.url }}" alt="Card image cap">
+                <h4 class="card-title text-center">{{ job.title }}</h4>
+                <div class="card-body">
+                  <p class="card-text"> {{ job.summary }}</p>
+                  <a href="{{ job.link }}"><button>View</button></a>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+    <footer class="text-muted">
+      <div class="container text-center">
+        <p>© Tyrell Frame {% now "Y" %}</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../../../dist/js/bootstrap.min.js"></script>
+    <script src="../../../../assets/js/vendor/holder.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+  </body>
+  <script>
+    window.sr = ScrollReveal({ duration: 2000 });
+    sr.reveal('.jumbotron-heading', { container: '#intro' });
+    sr.reveal('.profile-pic', { delay: 500 }, { container: '#intro' });
+    sr.reveal('.tagline', { delay: 1000 }, { container: '#intro' });
+    sr.reveal('#contact-btn', { delay: 1500 }, { container: '#intro' });
+    sr.reveal('.skill-block', { reset: true });
+    sr.reveal('.project-card');
+  </script>
+</html>
