@@ -11,11 +11,7 @@ a {
 /***** Navbar *****/
 
 .navbar {
-<<<<<<< HEAD
     background-color: #141414 !important; 
-=======
-    background-color: #141414 !important;
->>>>>>> 472a8a8dea617ad438b8dc5804f8a37162f2aa0f
 }
 
 .nav-link {
@@ -27,10 +23,7 @@ a {
 .bg-jumbotron {
     background-color: #141414;
     padding-top: 40px;
-<<<<<<< HEAD
-=======
     height: 100vh;
->>>>>>> 472a8a8dea617ad438b8dc5804f8a37162f2aa0f
     padding-bottom: 50px;
 }
 
@@ -43,15 +36,7 @@ a {
 }
 
 .tagline {
-<<<<<<< HEAD
-    margin: 20px auto;
-=======
-<<<<<<< HEAD
     margin: 40px auto;
-=======
-    margin: 20px auto;
->>>>>>> 801649d63ca563aba6aa9ed46d92314dc679fddc
->>>>>>> 472a8a8dea617ad438b8dc5804f8a37162f2aa0f
     max-width: 600px;
 }
 
@@ -117,6 +102,10 @@ a {
 button:hover {
     cursor: pointer;
     background: #FF3C38;
+}
+
+footer {
+    background-color: #f8f9fa;
 }
 
 @media (max-width: 768px) {
