@@ -23,7 +23,7 @@ a {
 .bg-jumbotron {
     background-color: #141414;
     padding-top: 40px;
-    height: 100vh;
+    height: 95vh;
     padding-bottom: 50px;
 }
 
@@ -68,6 +68,10 @@ a {
     padding: 50px;
 }
 
+.skills h1 {
+    padding-bottom: 30px;
+}
+
 .skills, .projects h1 {
     color: #141414;
 }
@@ -109,6 +113,10 @@ footer {
 }
 
 @media (max-width: 768px) {
+
+    .bg-jumbotron {
+        height: auto;
+    }
 
     [class*="col-"] {
         margin-bottom: 15px;
